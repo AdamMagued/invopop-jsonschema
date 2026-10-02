@@ -83,8 +83,16 @@
           "format": "uri"
         },
         "network_address": {
-          "type": "string",
-          "format": "ipv4"
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "ipv4"
+            },
+            {
+              "type": "string",
+              "format": "ipv6"
+            }
+          ]
         },
         "photo": {
           "type": "string",
